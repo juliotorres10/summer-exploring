@@ -1,7 +1,9 @@
 /* paleta de cores
 orange:#e2a355
 orange clean:#deb37e
-gray:#7f7770 */
+gray:#7f7770 
+dark gray:#68635f
+light gray:#c3bfdc */
 
 
 
@@ -12,12 +14,14 @@ body {
 
 
 /* header style */
+/*///////// BARRA DE BUSCA ////////*/
+
 
 .searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
-    background-color: #353b48;
+    background-color: #c3bfdc;
     border-radius: 30px;
     padding: 10px;
 }
@@ -35,14 +39,14 @@ body {
 
 .searchbar:hover>.search_input {
     padding: 0 10px;
-    width: 450px;
+    width: 200px;
     caret-color: red;
     transition: width 0.4s linear;
 }
 
 .searchbar:hover>.search_icon {
     background: white;
-    color: #e74c3c;
+    color: #e2a355;
 }
 
 .search_icon {
@@ -53,6 +57,19 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: white;
+    color:#68635f;
     text-decoration: none;
 }
+
+/*/////// FIZ DA BARRA DE BUSCA ////////*/
+
+
+/*/// CELULAR E TABLETS ///*/
+
+@media screen and (max-width: 992px) {
+    .searchbar:hover>.search_input {
+        width: 200px;
+    }
+}
+/*/// CELULAR E TABLETS ///*/
+
