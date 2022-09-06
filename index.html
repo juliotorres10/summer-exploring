@@ -35,7 +35,7 @@
 
 
 
-  <header>
+  <header class="fixed-top"> 
     <nav class="navbar navbar-expand-sm bg-papel-bottom pt-0 pb-4">
           <div class="container">
             <a class="navbar-brand" href="#"><img src="imagens/logo.png" class="logo" alt="logotipo Summer Exploring"></a>
@@ -82,8 +82,8 @@
 
 
 
-  <main>
-    <section id="banner-topo">
+  <main class="col-lg-10 offset-lg-1">
+    <section id="banner-topo" class="d-none d-md-block ">
       <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
           <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
@@ -92,21 +92,21 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-            <img src="imagens/grupo2-aventureira.jpg" class="w-100 d-block" alt="First slide">
+            <img src="imagens/banner-topo-aventureira.jpg" class="w-100 d-block" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h3>Title</h3>
               <p>Description</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="holder.js/900x500/auto/#666:#444/text:Second slide" class="w-100 d-block" alt="Second slide">
+            <img src="imagens/banner-topo-jeep.jpg" class="w-100 d-block" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
               <h3>Title</h3>
               <p>Description</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="holder.js/900x500/auto/#666:#444/text:Third slide" class="w-100 d-block" alt="Third slide">
+            <img src="imagens/banner-topo-montanha.jpg" class="w-100 d-block" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h3>Title</h3>
               <p>Description</p>
@@ -123,6 +123,52 @@
           </button>
       </div>
     </section>
+
+
+
+    <section id="bora" class="my-4 bg-folhas-left">
+      <h2 class="text-center fw-bold text-uppercase fs-1 txt-laranja">Bora lá</h2>
+      <p class="text-center col-md-6 offset-md-3 md-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptas tenetur officiis alias natus architecto adipisci, dignissimos optio reprehenderit rem libero et repellendus eaque nobis ad, similique consequuntur expedita fugiat?</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card bg-cinza-op5 text-light rounded-0 border-0">
+            <img class="card-img-top rounded-0" src="./imagens/grupo2-tres-amigos.jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-title">Title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi vel reiciendis, nesciunt ex suscipit deserunt labore possimus nihil porro natus facilis adipisci ab quam distinctio illo voluptatum quos expedita?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-cinza-op5 text-light rounded-0 border-0">
+            <img class="card-img-top rounded-0" src="./imagens/grupo2-aventureira.jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-title">Title</h4>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quae quos vel, inventore molestiae aliquid corrupti blanditiis, pariatur in vero dolores dignissimos consequuntur laborum doloremque necessitatibus ea nemo numquam sapiente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-cinza-op5 text-light rounded-0 border-0">
+            <img class="card-img-top rounded-0" src="./imagens/grupo2-bracos-abertos.jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-title">Title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nemo neque minima illo, distinctio ipsa at optio animi consequatur quam. Facilis, iusto modi illo voluptates mollitia repellat tempora assumenda voluptate!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="d-grid col-4 mx-auto mt-4">
+        <button class="rounded-5 border-0 bg-cinza text-light p-3">Show More</button>
+      </div>
+
+    </section>
+
 
 
   </main>
