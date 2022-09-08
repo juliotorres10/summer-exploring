@@ -19,9 +19,18 @@ body {
     background-repeat: no-repeat;
 }
 
+
+.expand-4:hover{
+    width: 33%;
+    color:#ff0;
+    transition:width 1s ease-in-out,color 1s ease-in;
+    
+}
+
+
 /* header style */
 /*///////// BARRA DE BUSCA ////////*/
-.logo{
+.logo {
     height: 80px;
 }
 
@@ -71,31 +80,49 @@ body {
 
 /*/////// FIZ DA BARRA DE BUSCA ////////*/
 
-.txt-laranja{
+.txt-laranja {
     color: #e2a355;
 }
 
-.txt-cinza{
-    color: #7f7770 ;
+.txt-cinza {
+    color: #7f7770;
 }
 
-.bg-laranja{
-background-color: #deb37e;
+.bg-laranja {
+    background-color: #deb37e;
 }
 
 .bg-cinza {
     background-color: rgba(127, 119, 112);
 }
 
-.bg-cinza-op5{
+.bg-cinza-op5 {
     background-color: rgba(127, 119, 112, 0.50);
 }
 
-.bg-folhas-left{
+.bg-folhas-left {
     background-image: url('../imagens/bg-sombra-folhagem.png');
     background-repeat: no-repeat;
     background-position: 0 bottom;
 }
+
+.altura-400px {
+    height: 400px;
+}
+
+/*multiplus backgrounds*/
+
+.bg-3 {
+    background-image: url('../imagens/bg-rasgado-branco-topo.png'), url('../imagens/bg-sombra-folhagem.png'), url('../imagens/bg-rasgado-branco-base.png');
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-size: 100%,30%,100%;
+    background-position: 0 -50px, 0 center, 0 320px;
+}
+
+.flip-x{
+    transform: scaleX(-1);
+}
+
 /*/// CELULAR E TABLETS ///*/
 
 @media screen and (max-width: 992px) {
