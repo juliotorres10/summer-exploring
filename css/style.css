@@ -20,11 +20,11 @@ body {
 }
 
 
-.expand-4:hover{
+.expand-4:hover {
     width: 33%;
-    color:#ff0;
-    transition:width 1s ease-in-out,color 1s ease-in;
-    
+    color: #ff0;
+    transition: width 1s ease-in-out, color 1s ease-in;
+
 }
 
 
@@ -104,6 +104,7 @@ body {
     background-image: url('../imagens/bg-sombra-folhagem.png');
     background-repeat: no-repeat;
     background-position: 0 bottom;
+    
 }
 
 .altura-400px {
@@ -114,21 +115,60 @@ body {
 
 .bg-3 {
     background-image: url('../imagens/bg-rasgado-branco-topo.png'), url('../imagens/bg-sombra-folhagem.png'), url('../imagens/bg-rasgado-branco-base.png');
-    background-repeat: no-repeat,no-repeat,no-repeat;
-    background-size: 100%,30%,100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100%, 30%, 100%;
     background-position: 0 -50px, 0 center, 0 320px;
 }
 
-.flip-x{
+.bg-topo-base-rasgado{
+    background-image: url('../imagens/bg-rasgado-branco-topo.png'), url('../imagens/bg-rasgado-branco-base.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
+    background-position: 0 -80px, 0 100%;
+}
+
+.flip-x {
     transform: scaleX(-1);
 }
 
-/*/// CELULAR E TABLETS ///*/
 
-@media screen and (max-width: 992px) {
-    .searchbar:hover>.search_input {
-        width: 200px;
+.kenburns-top {
+    -webkit-animation: kenburns-top 9s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+    animation: kenburns-top 9s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+}
+
+
+@-webkit-keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
     }
 }
+
+@keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
 
 /*/// CELULAR E TABLETS ///*/
