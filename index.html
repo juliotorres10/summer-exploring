@@ -258,28 +258,130 @@
       <p class="col-6 mx-auto mb-5 text-center">Preencha o formulário abaixo,queremos saber quem võce é.</p>
 
 
-      <form action="" method="POST" enctype="multipart/form-data" style="min-height: 430px;">
+      <form action="" class="pb-5 mb-5 needs-validation" novalidate method="POST" enctype="multipart/form-data"
+        class="pb-5 mb-5">
         <div class="mb-3">
-          <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome inteiro">
+          <input type="text" required name="nome" id="nome" class="form-control" placeholder="Digite seu nome inteiro">
+          <div class="invalid-feedback">Digite seu nome</div>
 
         </div>
         <div class="mb-3">
-          <input type="email" class="form-control" name="email" id="email"
-            placeholder="Seu email valido ex:abc@mail.com">
+          <input type="email" required class="form-control" name="email" id="email"
+            placeholder="Seu email valido ex:abc@mail.com"/>
+            <div class="invalid-feedback">Digite um email válido</div>
         </div>
 
         <fieldset class="border border-secundary p-3">
           <legend>Sexo:</legend>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sexo" id="sexo1" value="Feminino">
+            <input class="form-check-input" required type="radio" name="sexo" id="sexo1" value="Feminino">
             <label class="form-check-label" for="">Feminino</label>
+            <span class="invalid-feedback">Escolha uma opção</span>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sexo" id="sexo2" value="Masculino">
+            <input class="form-check-input" required type="radio" name="sexo" id="sexo2" value="Masculino">
             <label class="form-check-label" for="">Masculino</label>
+            <span class="invalid-feedback">Escolha uma opção</span>
           </div>
 
         </fieldset>
+
+        
+        <!-- Idade -->
+        <p class="m-0 mt-2">Sua idade: <span id="txt-idade" class="fw-bold"></span></p>
+        <input id="idade" type="range" class="form-range" name="idade" value="18" min="0" max="90">
+
+        <!-- telefone numero -->
+        <div class="mb-3">
+          <label for="" class="form-label">Seu Telefone:</label>
+          <input type="tel" name="telefone" id="" class="form-control" placeholder="inclua DDD">
+        </div>
+
+        <!-- senha -->
+        <div class="mb-3">
+          <label for="" class="form-label">Digite uma senha</label>
+          <input type="password" class="form-control" name="senha" id="" placeholder="">
+        </div>
+
+        <!-- FOTO -->
+        <div class="mb-3">
+          <label for="foto" class="form-label">Selecione uma foto para seu perfil</label>
+          <input type="file" class="form-control" name="foto" id="" placeholder="" aria-describedby="fileHelpId">
+          <div id="fileHelpId" class="form-text">Somente JPG,PNG ou GIF</div>
+        </div>
+
+        <!-- Estado/cidade usuário -->
+        <div class="mb-3 col-md-6">
+          <label for="Estado" class="form-label"> Selecione seu Estado (UF)</label>
+          <select class="form-control" name="Estado" id="Estado">
+            <option value="São Paulo">São Paulo</option>
+            <option value="Minas Gerais">Minas Gerais</option>
+            <option value="Bhaia">Bhaia</option>
+            <option value="Pernambuco">Pernambuco</option>
+          </select>
+        </div>
+
+        <div class="mb-3 col-md-6">
+          <label for="cidade" class="form-label"> Selecione a sua Cidade</label>
+          <select class="form-control" name="cidade" id="cidade">
+            <option value="São Paulo">São Paulo</option>
+            <option value="São Jose dos Campos">São Jose dos Campos</option>
+            <option value="Jacarei">Jacarei</option>
+            <option value="Caçapava">Caçapava</option>
+          </select>
+        </div>
+
+
+        <p class="m-0 mt-5">Selecione os destinos que gostaria de explorar:</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Brotas - SP" id="">
+          <label class="form-check-label" for="">
+            Brotas - SP
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Bonito - MS" id="">
+          <label class="form-check-label" for="">
+            Bonito - MS
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Jalapão - TO" id="">
+          <label class="form-check-label" for="">
+            Jalapão - TO
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Grand Canyon - Arizona, USA" id="">
+          <label class="form-check-label" for="">
+            Grand Canyon - Arizona, USA
+          </label>
+        </div>
+
+
+        <p class="m-0 mt-5">Selecione o tipo de hospedagem</p>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" name="hospedagem" value="Acampar" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Acampar (raiz)</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" name="hospedagem" value="Hotel/Pousada"
+            id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Hotel/Pousada (Nutela)</label>
+        </div>
+
+
+        <!--  Critica e sugestão -->
+        <div class="mb-3">
+          <label for="" class="form-label">Envie sugestões / criticas</label>
+          <textarea class="form-control" name="mensagem" id="" rows="5" maxlength="256"></textarea>
+        </div>
+
+        <!-- cadastro -->
+        <input type="hidden" name="dt-cadastro" id="dt-cadastro" value="">
+
+        <button type="submit" class="btn btn-primary mb-5">Enviar</button>
+
 
 
 
