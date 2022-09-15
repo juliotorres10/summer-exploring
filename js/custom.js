@@ -5,6 +5,7 @@ const mostraIdade = () => {
   let span = document.getElementById('txt-idade')
   let campoIdade = document.getElementById('idade')
   span.innerText = campoIdade.value
+  
 }
 
 var dataAtual = new Date()
@@ -65,6 +66,29 @@ const getCidadesByUf = (uf) => {
 
 }
 
+const rolagem = ()=>{
+  const html = document.documentElement
+  const linktopo = document.getElementById('linktopo')
+  linktopo.style.opacity = 0
+
+  /* //Se a rolagem for maior que 550, a seta aparece
+  abaixo de 550 esconda */
+
+  if (html.scrollTop > 550) {
+    linktopo.style.display = 'block'
+  } else {
+   
+   linktopo.style.display = 'none'
+  }
+
+
+  //console.log(html.scrollTop)
+}
+
+
+
+
+
     /*  EXEMPLO LAÇO FOR
     var semestre = ['jan', 'Fev', 'Marc', 'Abr', 'Mai', 'jun']
     var texto = ''
@@ -75,22 +99,12 @@ const getCidadesByUf = (uf) => {
     } */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     /* -------------------------------------------*/
 
 
     /*  //////////// EVENTOS E EXECUÇOES AUTOMATICAS ///////////////  */
+
+   
 
     getEstados()
 
@@ -129,7 +143,13 @@ const getCidadesByUf = (uf) => {
 
     document.getElementById('estado').addEventListener('change', function () {
       getCidadesByUf(this.value)
+    
+    
     })
+
+    window.onscroll = ()=> rolagem()
+
+
 
 // this representa o estado 
 

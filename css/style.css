@@ -10,6 +10,9 @@ light gray:#c3bfdc */
 body {
     font-family: 'Open Sans', sans-serif;
 }
+.logo{
+    box-shadow: #e2a355;
+}
 
 /* header style*/
 .bg-papel-bottom {
@@ -32,6 +35,30 @@ body {
 /*///////// BARRA DE BUSCA ////////*/
 .logo {
     height: 80px;
+}
+
+
+#linktopo {
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #e2a355;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow:10px 10px 10px rgb(27, 27, 26);
+    transition: background-color 0.8;
+   
+    
+
+}
+
+#linktopo:hover{
+    background-color: #deb37e;
+    
 }
 
 .searchbar {
@@ -104,7 +131,7 @@ body {
     background-image: url('../imagens/bg-sombra-folhagem.png');
     background-repeat: no-repeat;
     background-position: 0 bottom;
-    
+
 }
 
 .altura-400px {
@@ -120,7 +147,7 @@ body {
     background-position: 0 -50px, 0 center, 0 320px;
 }
 
-.bg-topo-base-rasgado{
+.bg-topo-base-rasgado {
     background-image: url('../imagens/bg-rasgado-branco-topo.png'), url('../imagens/bg-rasgado-branco-base.png');
     background-repeat: no-repeat, no-repeat;
     background-size: 100%, 100%;
